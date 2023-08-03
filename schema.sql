@@ -10,16 +10,16 @@ CREATE TABLE department (
 
 CREATE TABLE ROLE (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-    department INT,
-    FOREIGN KEY (department)
-    REFERENCES department(id)
-    ON DELETE SET NULL
+    title VARCHAR(30) NOT NULL,
+    salary DECIMAL,
+    
+    
 );
 
 CREATE TABLE employee (
     id INIT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
     department INT,
     FOREIGN KEY ()
 )
