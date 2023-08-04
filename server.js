@@ -13,12 +13,15 @@ function mainPrompt() {
     inquirer.prompt(
         [
             {
+                // this is the questions the user will see and respond to in the terminal 
                 type:"list",
                 name: "user_selection",
-                message: "welcome to the employee management app please make a selection",
+                message: "what would you like to do?",
                 choices: [
                     "view_all_employees",
-                    "exit"
+                    "add employee",
+                    "update employee role",
+                    "view all departments"
                 ]
             },
             {
@@ -29,7 +32,7 @@ function mainPrompt() {
      ]
      ) .then((answers) => {
          console.log({answers})
-        //  return answers 
+        //  return answers (console logs on line 35 and 38 will show the users selection in the terminal)
         
         }) .catch((err) => {
             console.log({err})
